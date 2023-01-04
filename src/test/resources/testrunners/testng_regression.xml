@@ -10,12 +10,30 @@
 	</listeners>
 
 	
-	<test name="Open Cart Login Page Test_safari">
+	
+
+<test name="Open Cart Home Page Test_chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.thortful.tests.HomePageTest" />
+		</classes>
+	</test>
+	
+	<test name="Open Cart Login Page Test_chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.thortful.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="Open Cart Home Page Test_chromium">
 		<parameter name="browser" value="chromium" />
 		<classes>
 			<class name="com.qa.thortful.tests.LoginPageTest" />
 		</classes>
 	</test>
+
+	
 
 	
 
