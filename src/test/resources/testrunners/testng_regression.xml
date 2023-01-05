@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Thortful Test Regression Suite" thread-count = "5" parallel ="tests" verbose="4">
+<suite name="Thortful Test Regression Suite" thread-count = "2" parallel ="tests" verbose="4">
 
 
     <listeners>
@@ -14,6 +14,12 @@
 			<class name="com.qa.thortful.tests.HomePageTest" />
 		</classes>
 	 </test>
+	 <test name="Thortful Home Page Test_chromium">
+		<parameter name="browser" value="chromium" />
+		<classes>
+			<class name="com.qa.thortful.tests.HomePageTest" />
+		</classes>
+	</test>
 	
 
 </suite>

@@ -56,15 +56,17 @@ public class HomePageTest extends BaseTest {
 		Assert.assertEquals(actualURL, prop.getProperty("url"));
 	}
 	
+	@Test
+	public void verifyHometoBaseketE2ETest() {
+		homePage.hometoBaseket();
+	}
+	
 //	@Test
 //	public void navigationTest() {
 //		homePage.clickAllNavMenus();
 //	}
 
-	@Test
-	public void verifyHometoBaseketE2ETest() {
-		homePage.hometoBaseket();
-	}
+	
 	
 //	@DataProvider
 //	public Object[][] getProductData() {
