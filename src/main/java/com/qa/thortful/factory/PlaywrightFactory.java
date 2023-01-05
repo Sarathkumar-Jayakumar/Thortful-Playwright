@@ -81,7 +81,10 @@ public class PlaywrightFactory {
 			break;
 		}
 		
-		tlBrowserContext.set(getBrowser().newContext());
+		//tlBrowserContext.set(getBrowser().newContext());
+		
+		tlBrowserContext.set(getBrowser().newContext(new Browser.NewContextOptions().setViewportSize(1920, 1080)));
+		
 		//browserContext = browser.newContext();
 		
 		tlPage.set(getBrowserContext().newPage());

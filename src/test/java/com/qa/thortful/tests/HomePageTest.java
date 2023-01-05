@@ -45,32 +45,44 @@ public class HomePageTest extends BaseTest {
 	// Practice:
 	
 	@Test
-	public void homePageTitleTest() {
+	public void verifyHomePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
 		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 	}
 
 	@Test
-	public void homePageURLTest() {
+	public void verifyHomePageURLTest() {
 		String actualURL = homePage.getHomePageURL();
 		Assert.assertEquals(actualURL, prop.getProperty("url"));
 	}
+	
+//	@Test
+//	public void navigationTest() {
+//		homePage.clickAllNavMenus();
+//	}
 
-	@DataProvider
-	public Object[][] getProductData() {
-		return new Object[][] {
-				{ "Macbook" }, 
-				{ "iMac" }, 
-				{ "Samsung" }
-		};
+	@Test
+	public void verifyHometoBaseketE2ETest() {
+		homePage.hometoBaseket();
 	}
+	
+//	@DataProvider
+//	public Object[][] getProductData() {
+//		return new Object[][] {
+//				{ "Macbook" }, 
+//				{ "iMac" }, 
+//				{ "Samsung" }
+//		};
+//	}
+//
+//	@Test(dataProvider = "getProductData")
+//	public void searchTest(String productName) throws InterruptedException {
+//		Thread.sleep(5000);
+//		String actualSearchHeader = homePage.doSearch(productName);
+//		Assert.assertEquals(actualSearchHeader, "Search - " + productName);
+//	}
 
-	@Test(dataProvider = "getProductData")
-	public void searchTest(String productName) throws InterruptedException {
-		Thread.sleep(5000);
-		String actualSearchHeader = homePage.doSearch(productName);
-		Assert.assertEquals(actualSearchHeader, "Search - " + productName);
-	}
-
+	
+	
 	
 }
