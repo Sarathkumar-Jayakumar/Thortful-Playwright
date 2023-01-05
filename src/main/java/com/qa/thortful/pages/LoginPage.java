@@ -12,6 +12,7 @@ public class LoginPage {
 	private String forgotPwdLink = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']";
 	private String logoutLink = "//a[@class='list-group-item'][normalize-space()='Logout']";
 	
+	public String data;
 	
 	public LoginPage(Page page) {
 		this.page = page;
